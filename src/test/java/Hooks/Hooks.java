@@ -6,7 +6,7 @@ import com.microsoft.playwright.Page;
 import io.cucumber.java.*;
 
 public class Hooks {
-    @Before
+    @Before(order=0)
     public void setUp() {
         PlaywrightManager.start();
         Page page = PlaywrightManager.page();

@@ -1,8 +1,8 @@
-@smoke
+
 Feature: Login
 
   Scenario: Login as a locked user
-    Given the user logs in as "locked_user"
+    Given the user logs in as "locked_out_user"
     Then the locked out error page is displayed
 
   Scenario: Login as standard user

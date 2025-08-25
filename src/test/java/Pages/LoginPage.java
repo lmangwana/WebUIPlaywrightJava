@@ -11,9 +11,9 @@ public class LoginPage extends BasePage {
     public LoginPage(Page page) { super(page); }
 
     public void login(String username, String password) {
-        page.locator(userInput).fill(username);
-        page.locator(passInput).fill(password);
-        page.locator(loginBtn).click();
+        type(userInput, username);
+        type(passInput, password);
+        click(loginBtn);
     }
 
     public void isErrorVisible() {

@@ -33,6 +33,9 @@ public class PlaywrightManager {
         try { if (context.get() != null) context.get().close(); } catch (Exception ignored) {}
         try { if (browser.get() != null) browser.get().close(); } catch (Exception ignored) {}
         try { if (playwright.get() != null) playwright.get().close(); } catch (Exception ignored) {}
-        page.remove(); context.remove(); browser.remove(); playwright.remove();
+        page.remove();
+        context.remove();
+        browser.remove();
+        playwright.remove();
     }
 }

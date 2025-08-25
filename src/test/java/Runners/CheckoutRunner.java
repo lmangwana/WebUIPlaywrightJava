@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
                 "src/test/resources/features/addYourInformation.feature",
                 "src/test/resources/features/placeOrder.feature"
         },
-        glue = {"Steps", "Hook"},
+        glue = {"Steps", "Hooks"},
         plugin = {"pretty", "html:target/cucumber-report.html"}
 )
 public class CheckoutRunner extends AbstractTestNGCucumberTests {}

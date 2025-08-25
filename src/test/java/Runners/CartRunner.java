@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
                 "src/test/resources/features/addItemsToCart.feature",
                 "src/test/resources/features/viewCartAndVerifyItems.feature"
         },
-        glue = {"Steps", "Hook"},
+        glue = {"Steps", "Hooks"},
         plugin = {"pretty", "html:target/cucumber-report.html"}
 )
 public class CartRunner extends AbstractTestNGCucumberTests {}

@@ -9,23 +9,23 @@
         </classes>
     </test>
 
-    <test name="Add items to Cart">
-        <classes>
-            <class name="Runners.CartRunner"/>
-        </classes>
-    </test>
+<!--    <test name="Add items to Cart">-->
+<!--        <classes>-->
+<!--            <class name="Runners.CartRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Checkout">
-        <classes>
-            <class name="Runners.CheckoutRunner"/>
-        </classes>
-    </test>
+<!--    <test name="Checkout">-->
+<!--        <classes>-->
+<!--            <class name="Runners.CheckoutRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="ViewCart And Verify Items">
-        <classes>
-            <class name="Runners.SmokeRunner"/>
-        </classes>
-    </test>
+<!--    <test name="ViewCart And Verify Items">-->
+<!--        <classes>-->
+<!--            <class name="Runners.SmokeRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 </suite>

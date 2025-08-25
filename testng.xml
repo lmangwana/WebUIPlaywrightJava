@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="WebUIPlaywright Suite" verbose="2" parallel="none" >
+
+    <!-- ✅ FIRST RUNNER -->
+    <test name="Login">
+        <classes>
+            <class name="Runners.LoginRunner"/>
+        </classes>
+    </test>
+
+    <test name="Add items to Cart">
+        <classes>
+            <class name="Runners.CartRunner"/>
+        </classes>
+    </test>
+
+    <test name="Checkout">
+        <classes>
+            <class name="Runners.CheckoutRunner"/>
+        </classes>
+    </test>
+
+    <test name="ViewCart And Verify Items">
+        <classes>
+            <class name="Runners.SmokeRunner"/>
+        </classes>
+    </test>
+
+
+</suite>

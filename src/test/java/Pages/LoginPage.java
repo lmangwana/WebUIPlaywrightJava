@@ -6,7 +6,8 @@ public class LoginPage extends BasePage {
     private final String userInput = "#user-name";
     private final String passInput = "#password";
     private final String loginBtn  = "#login-button";
-    private final String errorBox  = ".error-message-container";
+    private final String genericPasswordUsernameError  = "h3[data-test='error']";
+    private final String lockedOutError  = "h3[data-test='error']";
 
     public LoginPage(Page page) { super(page); }
 
@@ -16,7 +17,7 @@ public class LoginPage extends BasePage {
         click(loginBtn);
     }
 
-    public void isErrorVisible() {
-        shouldSee(errorBox);
+    public void isLockedOutErrorVisible() {
+        shouldSee(lockedOutError);
     }
 }

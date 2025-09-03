@@ -7,7 +7,9 @@ public class BasePage {
     protected final Page page;
     public BasePage(Page page) { this.page = page; }
 
-    protected void shouldSee(String selector) { PlaywrightAssertions.assertThat(page.locator(selector)).isVisible(); }
+    protected void shouldSee(String selector) {
+       PlaywrightAssertions.assertThat(page.locator(selector)).isVisible();
+    }
 
     protected void click(String selector) {
         page.locator(selector).click();

@@ -16,13 +16,27 @@ public class ConfigManager {
     static {
         try (InputStream is = ConfigManager.class.getClassLoader()
                 .getResourceAsStream("config.properties")) {
-            props.load(is);
-        } catch (Exception e) { throw new RuntimeException(e); }
+            props.load(is); // file is optional when CI injects via -D/ENV
+        } catch (Exception e) {throw new RuntimeException("Failed to load config.properties", e);}
     }
-    public static String get(String key) { return props.getProperty(key); }
+    /**
+     * Priority:
+     * 1) JVM System property:   -DbaseUrl=..., -Duser.standard_user=...
+     * 2) config.properties on classpath
+     */
+    public static String get(String key) {
+        // 1) -Dkey=value
+        String sys = System.getProperty(key);
+        if (sys != null) return sys;
+
+        // 2) properties file
+        return props.getProperty(key);
+    }
     public static String baseUrl() { return get("baseUrl"); }
     public static String browser() { return get("browser"); }
     public static boolean headed() { return Boolean.parseBoolean(get("headed")); }
-    public static String username(String userType) { return get("user." + userType); }
+    public static String username(String userType) {
+        System.out.println("This is the usertype returned: "+get("user." + userType));
+        return get("user." + userType); }
     public static String password() { return get("password"); }
 }

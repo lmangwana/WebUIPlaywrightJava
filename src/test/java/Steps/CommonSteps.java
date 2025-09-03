@@ -20,7 +20,7 @@ public class CommonSteps {
     }
 
     @Then("the locked out error page is displayed")
-    public void lockedOutPageDisplayed() { login.isErrorVisible();}
+    public void lockedOutPageDisplayed() { login.isLockedOutErrorVisible();}
 
 
     @Then("the products page is displayed")

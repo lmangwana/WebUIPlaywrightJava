@@ -1,9 +1,6 @@
 Feature: Place order
   Scenario: Complete checkout
-    Given the user logs in as "standard_user"
-    When the user adds "Sauce Labs Backpack" to the cart
-    And navigates to the cart
-#    And the user proceeds to checkout
-#    And enters shipping details "Lutho" "Mangwana" "2196"
-#    And finishes the order
-#    Then the order is confirmed
+    Given the user is on "step-two" of the check out flow
+    And the Price total is correct
+    When the user clicks on "Finish"
+    Then they see an order confirmation

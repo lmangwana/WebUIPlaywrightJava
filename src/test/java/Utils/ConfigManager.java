@@ -36,7 +36,6 @@ public class ConfigManager {
     public static String browser() { return get("browser"); }
     public static boolean headed() { return Boolean.parseBoolean(get("headed")); }
     public static String username(String userType) {
-        System.out.println("This is the usertype returned: "+get("user." + userType));
         return get("user." + userType); }
     public static String password() { return get("password"); }
 }

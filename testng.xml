@@ -2,13 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="WebUIPlaywright Suite" verbose="2" parallel="none" >
 
-    <!-- ✅ FIRST RUNNER -->
+    <!-- FIRST RUNNER -->
     <test name="Login">
         <classes>
             <class name="Runners.LoginRunner"/>
         </classes>
     </test>
 
+
+    <test name="Place an Order E2E">
+        <classes>
+            <class name="Runners.SmokeRunner"/>
+        </classes>
+    </test>
 <!--    <test name="Add items to Cart">-->
 <!--        <classes>-->
 <!--            <class name="Runners.CartRunner"/>-->
